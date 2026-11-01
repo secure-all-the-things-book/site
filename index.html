@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure All The Things With Spring Security</title>
+    <meta name="description" content="Master Spring Security, OAuth, and the Spring Authorization Server with Josh Long.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spring: {
+                            light: '#6db33f',
+                            DEFAULT: '#6db33f',
+                            dark: '#5a9931',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        }
+        .cover-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+                        Secure <span class="text-spring">All The Things</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-gray-300 font-light mb-8">
+                        The definitive guide to mastering Spring Security, OAuth, and the Spring Authorization Server.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-10 leading-relaxed">
+                        By Josh Long
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://leanpub.com/secure-all-the-things-with-spring-security" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-spring hover:bg-spring-dark text-white rounded-lg font-bold text-lg transition duration-300 transform hover:-translate-y-1 shadow-lg text-center flex items-center justify-center">
+                            <i class="fa-solid fa-book-open mr-2"></i> Buy on Leanpub
+                        </a>
+                        <a href="#" class="w-full sm:w-auto px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-bold text-lg transition duration-300 transform hover:-translate-y-1 shadow-lg text-center flex items-center justify-center" onclick="alert('Amazon link coming soon!')">
+                            <i class="fa-brands fa-amazon mr-2"></i> Buy on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Book Cover -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="images/cover.png" alt="Secure All The Things Book Cover" class="w-2/3 max-w-sm rounded-md cover-shadow transform rotate-2 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Description Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Lock Down Your Architecture</h2>
+            <div class="text-lg text-gray-600 leading-relaxed space-y-6 text-left">
+                <p>
+                    Security isn't a feature you bolt on at the end; it's the foundation of every robust application. In <strong>Secure All The Things</strong>, Spring Developer Advocate Josh Long takes you on a comprehensive journey through the modern Java security landscape.
+                </p>
+                <p>
+                    Whether you're building traditional monolithic web applications, dynamic single-page applications, distributed microservices, or bleeding-edge native binaries, this book equips you with the tools and knowledge to secure them all. 
+                </p>
+                <p>
+                    You'll start with the fundamentals of Spring Security and progressively tackle advanced concepts like OAuth2, Passkeys, Multi-Factor Authentication (MFA), and deploying a production-ready Spring Authorization Server. Learn to implement robust security across web boundaries, messaging protocols, gRPC, GraphQL, and even desktop JavaFX apps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOC Section -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What You'll Learn</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Column 1 -->
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">1. The Fundamentals</h3>
+                        <p class="text-gray-600">Master the core concepts of Java, Dependency Injection, Spring Boot, and Spring Security.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">2. Identity & Credentials</h3>
+                        <p class="text-gray-600">Implement robust user authentication spanning Passwords, Magic Links, Passkeys, and MFA.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">3. Advanced Authorization</h3>
+                        <p class="text-gray-600">Deep dive into OAuth2, granular authorization rules, and federated identity.</p>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">4. Spring Authorization Server</h3>
+                        <p class="text-gray-600">Build, implement, and persist your own production-grade identity provider.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">5. Securing Every Client</h3>
+                        <p class="text-gray-600">Apply security patterns across Web interfaces, JavaFX desktop apps, and Shell environments.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">6. Securing Integrations</h3>
+                        <p class="text-gray-600">Lock down gRPC, SOAP, Model Context Protocol (MCP), distributed messaging, and multi-tenant architectures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-6">Ready to secure your architecture?</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a href="https://leanpub.com/secure-all-the-things-with-spring-security" target="_blank" class="px-6 py-3 bg-spring hover:bg-spring-dark text-white rounded-md font-bold transition">
+                    Buy on Leanpub
+                </a>
+                <a href="#" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-md font-bold transition" onclick="alert('Amazon link coming soon!')">
+                    Buy on Amazon
+                </a>
+            </div>
+            <p>&copy; 2026 Josh Long. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
